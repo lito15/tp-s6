@@ -1,0 +1,13 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+# Static url redirections
+RewriteRule ^accueil$ index.php?c=IndexControl&m=index [L]
+RewriteRule ^admin$ index.php?c=AdminControl&m=index [L]
+RewriteRule ^ajoutJournal$ index.php?c=JournalControl&m=index [L]
+RewriteRule ^ajoutType$ index.php?c=CategorieControl&m=index [L]
+RewriteRule ^InsertJ$ index.php?c=JournalControl&m=insert [L]
+RewriteRule ^liste-([A-Za-z0-9-]+)-([0-9]+).html$ index.php?c=JournalControl&m=liste2&id=$2 [L]
+RewriteRule ^udpateAccueil-([A-Za-z0-9-]+)-([0-9]+).html$ index.php?c=JournalControl&m=updateAccueil&id=$2 [L]
+RewriteRule ^nouvelle-([A-Za-z0-9-]+)-([0-9]+).html$ index.php?c=IndexControl&m=fiche&id=$2 [L]
+RewriteRule ^categorie-([A-Za-z0-9-]+)-([0-9]+).html$ index.php?c=IndexControl&m=byCategorie&id=$2 [L]
